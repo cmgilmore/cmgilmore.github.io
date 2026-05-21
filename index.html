@@ -227,26 +227,18 @@
     #approach { background: var(--cream); }
     .approach-intro { max-width: 680px; margin: 0 auto 3.5rem; text-align: center; }
     .approach-intro p { color: var(--mid); font-size: .97rem; line-height: 1.85; font-weight: 300; }
-    .modality-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.6rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .modality-grid { max-width: 860px; margin: 0 auto; }
     .modality-card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-top: 3px solid var(--forest);
-      padding: 2rem 1.8rem;
-      display: flex;
-      flex-direction: column;
-      gap: .9rem;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 1rem 3rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--line);
+      align-items: baseline;
     }
-    .mod-name { font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--forest); }
+    .modality-card:first-child { border-top: 1px solid var(--line); }
+    .mod-name { font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--forest); }
     .mod-desc { font-size: .88rem; color: var(--mid); line-height: 1.75; font-weight: 300; }
-    @media (max-width: 900px) { .modality-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 580px) { .modality-grid { grid-template-columns: 1fr; } }
     .approach-close {
       margin-top: 2.8rem; max-width: 640px; padding-top: 2rem;
       border-top: 1px solid var(--line); font-size: .96rem; color: var(--mid);
@@ -265,21 +257,22 @@
       background: linear-gradient(135deg, rgba(18,28,20,.93) 0%, rgba(18,28,20,.82) 100%);
     }
     #who .sec { position: relative; z-index: 1; }
-    .specialties {
-      display: grid; grid-template-columns: repeat(3,1fr); gap: 0;
-      border-top: 1px solid rgba(255,255,255,.12);
-      border-left: 1px solid rgba(255,255,255,.12);
-    }
+    .specialties { max-width: 860px; margin: 0 auto; }
     .specialty {
-      padding: 2.2rem 1.8rem;
-      border-right: 1px solid rgba(255,255,255,.12);
-      border-bottom: 1px solid rgba(255,255,255,.12);
-      transition: background var(--ease);
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 1rem 3rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+      align-items: baseline;
     }
-    .specialty:hover { background: rgba(255,255,255,.05); }
+    .specialty:first-child { border-top: 1px solid rgba(255,255,255,.15); }
+    .specialty:hover { background: transparent; }
+    .specialty:last-child h3 { margin-bottom: .4rem; }
     .specialty h3 {
-      font-size: 1.05rem; color: #fff; margin-bottom: .6rem;
-      font-weight: 400; letter-spacing: .01em;
+      font-family: 'Inter', sans-serif; font-size: .82rem;
+      font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: rgba(255,255,255,.9); margin-bottom: 0;
     }
     .specialty p { font-size: .83rem; color: rgba(255,255,255,.52); line-height: 1.72; font-weight: 300; }
     .spec-num {
@@ -514,7 +507,8 @@
       <div class="eyebrow">About Me</div>
       <h2 class="sec-title">About Me</h2>
       <p>Before coming to the therapy space, I spent nearly two decades in corporate leadership, coaching and developing individuals and teams in a variety of organizational settings — an experience that gave me firsthand insight into burnout, achievement pressure, identity struggles, and the quiet way high-functioning people can sometimes appear successful on the outside while feeling anxious, exhausted, or emotionally stuck on the inside.</p>
-      <p>That chapter eventually led me toward a deeper interest in emotional healing, nervous system work, and meaningful human connection, and ultimately into the counseling profession. My work today is grounded in trauma-informed care, attachment theory, Polyvagal Theory, mindfulness, and EMDR. I'm especially passionate about helping people gain insight into the <em>why</em> behind their patterns and restore regulation to their nervous systems.</p>
+      <p>That chapter eventually led me toward a deeper interest in emotional healing, nervous system work, and meaningful human connection, and ultimately into the counseling profession. My work today is grounded in trauma-informed care, attachment and nervous system science, Polyvagal Theory, and EMDR-informed approaches that support greater regulation, self-understanding, and emotional connection. I&#8217;m especially passionate about helping people gain insight into the <em>why</em> behind their patterns and restore regulation to their nervous systems.</p>
+      <p>I value creating a therapy space where people feel safe showing up authentically, including clients navigating questions of identity, belonging, relationships, and self-acceptance.</p>
       <div class="creds-list">
         <div class="eyebrow" style="margin-bottom:1rem; margin-top:2.5rem;">Education <span class="amp">&amp;</span> Credentials</div>
         <div class="cred-item"><span class="cred-dot"></span><span>B.A. in Psychology</span></div>
@@ -541,31 +535,14 @@
     <h2 class="sec-title">How I Work</h2>
     <p>Therapy with me is collaborative and tailored — we figure out together what works for you. I draw on a range of evidence-based approaches depending on what you're navigating:</p>
   </div>
+  <p style="text-align:center; max-width:700px; margin: 0 auto 2.5rem; font-size:.96rem; color:var(--mid); line-height:1.85; font-weight:300;">In therapy, we&#8217;ll move at a pace that feels safe and useful. Some sessions may focus on insight and reflection; others may include body-based awareness, nervous system regulation, EMDR preparation or processing, or exploring the relationship patterns that keep showing up in your life.</p>
   <div class="modality-grid">
-    <div class="modality-card">
-      <div class="mod-name">EMDR</div>
-      <div class="mod-desc">An evidence-based approach that helps process and heal distressing experiences, reducing the emotional charge connected to difficult memories.</div>
-    </div>
-    <div class="modality-card">
-      <div class="mod-name">Trauma-Informed Care</div>
-      <div class="mod-desc">Understanding how past experiences shape present patterns, with deep respect for how the nervous system learned to survive.</div>
-    </div>
-    <div class="modality-card">
-      <div class="mod-name">Somatic Techniques</div>
-      <div class="mod-desc">Bringing awareness to the body's signals and sensations as a pathway to processing and healing stored stress and trauma.</div>
-    </div>
-    <div class="modality-card">
-      <div class="mod-name">Mindfulness-Based Approaches</div>
-      <div class="mod-desc">Building present-moment awareness to create space between experience and reaction — and to reconnect with what matters.</div>
-    </div>
-    <div class="modality-card">
-      <div class="mod-name">Nervous System Awareness</div>
-      <div class="mod-desc">Working with your nervous system — not against it — to move from survival states toward safety, connection, and regulation.</div>
-    </div>
-    <div class="modality-card">
-      <div class="mod-name">Attachment Theory</div>
-      <div class="mod-desc">Exploring how early relational patterns shape the way you connect with others today — and building more secure, fulfilling relationships.</div>
-    </div>
+    <div class="modality-card"><div class="mod-name">EMDR</div><div class="mod-desc">An evidence-based approach that helps process and heal distressing experiences, reducing the emotional charge connected to difficult memories.</div></div>
+    <div class="modality-card"><div class="mod-name">Trauma-Informed Care</div><div class="mod-desc">Understanding how past experiences shape present patterns, with deep respect for how the nervous system learned to survive.</div></div>
+    <div class="modality-card"><div class="mod-name">Somatic Techniques</div><div class="mod-desc">Bringing awareness to the body's signals and sensations as a pathway to processing and healing stored stress and trauma.</div></div>
+    <div class="modality-card"><div class="mod-name">Mindfulness-Based Approaches</div><div class="mod-desc">Building present-moment awareness to create space between experience and reaction — and to reconnect with what matters.</div></div>
+    <div class="modality-card"><div class="mod-name">Nervous System Awareness</div><div class="mod-desc">Working with your nervous system — not against it — to move from survival states toward safety, connection, and regulation.</div></div>
+    <div class="modality-card"><div class="mod-name">Attachment Theory</div><div class="mod-desc">Exploring how early relational patterns shape the way you connect with others today — and building more secure, fulfilling relationships.</div></div>
   </div>
   <p class="approach-close" style="text-align:center; max-width:700px; margin:2.5rem auto 0;">Sessions are a space to gain awareness, connect with the body, identify patterns, and build toward what you actually want your life to look like.</p>
 </section>
@@ -579,12 +556,13 @@
     <h2 class="sec-title lt" style="margin-bottom:.8rem;">Who I Work With</h2>
     <p class="sec-lead lt">I work with adults navigating a range of challenges, including:</p>
     <div class="specialties">
-      <div class="specialty"><div class="spec-num">01</div><h3>Trauma <span class="amp">&amp;</span> PTSD</h3><p>Healing from past experiences that continue to affect how you feel, think, and relate to others.</p></div>
-      <div class="specialty"><div class="spec-num">02</div><h3>Anxiety</h3><p>Reducing worry, overwhelm, and the patterns that keep you stuck in fear-based thinking.</p></div>
-      <div class="specialty"><div class="spec-num">03</div><h3>Life Transitions</h3><p>Navigating change — career shifts, relationships, identity, loss — with clarity and intention.</p></div>
-      <div class="specialty"><div class="spec-num">04</div><h3>Relationship Challenges</h3><p>Understanding patterns in how you connect with others, and building healthier ways of relating.</p></div>
-      <div class="specialty"><div class="spec-num">05</div><h3>Identity <span class="amp">&amp;</span> Personal Growth</h3><p>Exploring who you are and who you want to become, on your own terms.</p></div>
-      <div class="specialty"><div class="spec-num">06</div><h3>Depression <span class="amp">&amp;</span> Mood</h3><p>Addressing persistent low mood, loss of motivation, and the weight that makes daily life feel hard.</p></div>
+      <div class="specialty"><h3>Trauma <span class="amp">&amp;</span> PTSD</h3><p>Healing from past experiences that continue to affect how you feel, think, and relate to others.</p></div>
+      <div class="specialty"><h3>Anxiety</h3><p>Reducing worry, overwhelm, and the patterns that keep you stuck in fear-based thinking.</p></div>
+      <div class="specialty"><h3>Life Transitions</h3><p>Navigating change — career shifts, relationships, identity, loss — with clarity and intention.</p></div>
+      <div class="specialty"><h3>Relationship <span class="amp">&amp;</span> Couples Work</h3><p>Understanding patterns in how you connect, protect yourself, pursue closeness, manage conflict, and repair disconnection — individually or as a couple.</p></div>
+      <div class="specialty"><h3>Identity <span class="amp">&amp;</span> Personal Growth</h3><p>Exploring who you are and who you want to become, on your own terms.</p></div>
+      <div class="specialty"><h3>Depression <span class="amp">&amp;</span> Mood</h3><p>Addressing persistent low mood, loss of motivation, and the weight that makes daily life feel hard.</p></div>
+      <div class="specialty"><h3>LGBTQ+ Clients <span class="amp">&amp;</span> Identity Exploration</h3><p>Affirming therapy for LGBTQ+ adults navigating identity, relationships, family dynamics, trauma, anxiety, life transitions, and the impact of feeling different, unseen, or emotionally disconnected — with space to build self-trust and move toward greater authenticity and connection.</p></div>
     </div>
   </div>
 </div>
@@ -626,8 +604,7 @@
 <section id="supervision" class="sec">
   <div class="eyebrow">Clinical Oversight</div>
   <h2 class="sec-title">Clinical Supervision</h2>
-  <p class="sec-lead" style="text-align:center; margin-left:auto; margin-right:auto;">I believe good therapists never stop learning. Ongoing clinical supervision and consultation are an important part of how I continue developing as a clinician and ensuring that clients receive thoughtful, ethical, and effective care.</p>
-  <p class="sec-lead" style="text-align:center; margin-left:auto; margin-right:auto; margin-top:-2rem;">My work is supported through ongoing consultation and mentorship with experienced clinicians specializing in trauma, attachment, relational therapy, and nervous system-informed approaches.</p>
+  <p class="sec-lead" style="text-align:center; margin-left:auto; margin-right:auto;">I believe good therapists never stop learning. My work is actively supported through ongoing supervision and consultation with two experienced clinicians who specialize in trauma, attachment, relational therapy, and nervous system-informed approaches. For clients, this means you are not only benefiting from my direct care and perspective — but also from the guidance, insight, and support of highly experienced clinicians who help inform and strengthen my work behind the scenes.</p>
   <div class="sup-grid">
     <div class="sup-card">
       <div class="sup-photo-row">
@@ -649,8 +626,8 @@
       </div>
       <p>Chris Watney is an experienced therapist, coach, and practice owner with a background in individual, family, and couples therapy. She brings a thoughtful, grounded perspective informed by years of work in trauma recovery, anxiety, grief, mindfulness, and human connection. Her supervision and consultation support my development as both a clinician and private practice therapist, with an emphasis on authenticity, presence, and helping clients move toward meaningful change.</p>
     </div>
-    <div class="sup-note">For clients, this means you are not only benefiting from my direct care and perspective, but also from the guidance, insight, and support of highly experienced clinicians who help inform and strengthen my work behind the scenes.</div>
-  </div></section>
+  </div>
+</section>
 
 <!-- FEES -->
 <section id="fees" class="sec">
@@ -664,6 +641,9 @@
 
 <!-- CONTACT -->
 <section id="contact" class="sec">
+  <div style="max-width:720px; margin: 0 auto 4rem; text-align:center;">
+    <p style="font-size:1.08rem; color:var(--mid); line-height:1.9; font-weight:300;">Therapy can help you begin to understand why you react the way you do, why certain relationships feel familiar but painful, why your body stays on alert, or why you feel stuck even when you&#8217;ve done everything you were &#8220;supposed&#8221; to do. Together, we&#8217;ll work toward more regulation, clarity, self-trust, and connection.</p>
+  </div>
   <div class="contact-grid">
     <div class="contact-info">
       <div class="eyebrow">Let's Connect</div>
@@ -672,7 +652,7 @@
       <div class="info-rows">
         <div class="info-row">
           <div class="info-icon"><span>CO</span></div>
-          <div><div class="info-lbl">Location</div><div class="info-val">Colorado — In-Person <span class="amp">&amp;</span> Remote</div></div>
+          <div><div class="info-lbl">Location</div><div class="info-val">In-Person in Evergreen or Lakewood · Telehealth available throughout Colorado</div></div>
         </div>
         <div class="info-row">
           <div class="info-icon"><span>$</span></div>
@@ -718,7 +698,7 @@
     <div class="footer-brand">
       <div class="footer-name">Chris Gilmore</div>
       <div class="footer-cred">Ed.D., LPCC, NCC</div>
-      <p>Licensed Professional Counselor Candidate in Colorado, providing trauma-informed, evidence-based therapy for adults.</p>
+      <p>LPCC in Colorado providing trauma-informed, nervous system-informed therapy for adults and couples in Colorado.</p>
     </div>
     <div class="footer-col">
       <h5>Navigate</h5>
