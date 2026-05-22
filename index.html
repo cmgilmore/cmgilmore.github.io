@@ -439,7 +439,27 @@
       .photo-break { height: 280px; }
       .photo-break.tall { height: 380px; }
     }
-  </style>
+  
+  /* ── Mobile: stack row layouts ── */
+  @media (max-width: 600px) {
+    .modality-card {
+      grid-template-columns: 1fr;
+      gap: .3rem;
+      padding: 1.2rem 0;
+    }
+    .mod-name {
+      margin-bottom: .2rem;
+    }
+    .specialty {
+      grid-template-columns: 1fr;
+      gap: .3rem;
+      padding: 1.2rem 0;
+    }
+    .specialty h3 {
+      margin-bottom: .2rem;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -505,7 +525,6 @@
     </div>
     <div class="about-text">
       <div class="eyebrow">About Me</div>
-      <h2 class="sec-title">About Me</h2>
       <p>Before coming to the therapy space, I spent nearly two decades in corporate leadership, coaching and developing individuals and teams in a variety of organizational settings — an experience that gave me firsthand insight into burnout, achievement pressure, identity struggles, and the quiet way high-functioning people can sometimes appear successful on the outside while feeling anxious, exhausted, or emotionally stuck on the inside.</p>
       <p>That chapter eventually led me toward a deeper interest in emotional healing, nervous system work, and meaningful human connection, and ultimately into the counseling profession. My work today is grounded in trauma-informed care, attachment and nervous system science, Polyvagal Theory, and EMDR-informed approaches that support greater regulation, self-understanding, and emotional connection. I&#8217;m especially passionate about helping people gain insight into the <em>why</em> behind their patterns and restore regulation to their nervous systems.</p>
       <p>I value creating a therapy space where people feel safe showing up authentically, including clients navigating questions of identity, belonging, relationships, and self-acceptance.</p>
@@ -532,7 +551,6 @@
 <section id="approach" class="sec">
   <div class="approach-intro">
     <div class="eyebrow">How I Work</div>
-    <h2 class="sec-title">How I Work</h2>
     <p>Therapy with me is collaborative and tailored — we figure out together what works for you. I draw on a range of evidence-based approaches depending on what you're navigating:</p>
   </div>
   <p style="text-align:center; max-width:700px; margin: 0 auto 2.5rem; font-size:.96rem; color:var(--mid); line-height:1.85; font-weight:300;">In therapy, we&#8217;ll move at a pace that feels safe and useful. Some sessions may focus on insight and reflection; others may include body-based awareness, nervous system regulation, EMDR preparation or processing, or exploring the relationship patterns that keep showing up in your life.</p>
@@ -553,7 +571,6 @@
   <div class="who-overlay"></div>
   <div class="sec" style="position:relative;z-index:1;">
     <div class="eyebrow lt">Who I Work With</div>
-    <h2 class="sec-title lt" style="margin-bottom:.8rem;">Who I Work With</h2>
     <p class="sec-lead lt">I work with adults navigating a range of challenges, including:</p>
     <div class="specialties">
       <div class="specialty"><h3>Trauma <span class="amp">&amp;</span> PTSD</h3><p>Healing from past experiences that continue to affect how you feel, think, and relate to others.</p></div>
@@ -648,7 +665,7 @@
     <div class="contact-info">
       <div class="eyebrow">Let's Connect</div>
       <h2 class="sec-title">Ready to take<br>the first step?</h2>
-      <p>Ready to take a first step? Reach out using the form below and I'll get back to you as quickly as possible. Initial consultations are free and there's no commitment required.</p>
+      <p>Reach out using the form below and I'll get back to you as quickly as possible. Initial consultations are free and there's no commitment required.</p>
       <div class="info-rows">
         <div class="info-row">
           <div class="info-icon"><span>CO</span></div>
