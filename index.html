@@ -406,6 +406,7 @@
       letter-spacing: .04em; transition: background var(--ease);
     }
     .btn-submit:hover { background: #b08050; }
+    a.btn-submit { display: block; text-align: center; text-decoration: none; }
 
     /* ── FOOTER ── */
     footer { background: var(--ink); padding: 4rem 5% 2.5rem; }
@@ -681,7 +682,7 @@
   <div class="contact-grid">
     <div class="contact-info">
       <h2 class="sec-title">Ready to take<br>the first step?</h2>
-      <p>Reach out using the form below and I'll get back to you as quickly as possible. Initial consultations are free and there's no commitment required.</p>
+      <p>Book your free consultation directly using the scheduler, or reach out using the contact info below. Initial consultations are free and there's no commitment required.</p>
       <div class="info-rows">
         <div class="info-row">
           <div class="info-icon"><span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></span></div>
@@ -705,29 +706,10 @@
       </div>
     </div>
     <div class="contact-form">
-      <h3>Send a Message</h3>
-      <div class="form-row">
-        <div class="fg"><label>First Name</label><input type="text" placeholder="Chris" /></div>
-        <div class="fg"><label>Last Name</label><input type="text" placeholder="Gilmore" /></div>
-      </div>
-      <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com" /></div>
-      <div class="fg"><label>Phone (optional)</label><input type="tel" placeholder="(720) 000-0000" /></div>
-      <div class="fg">
-        <label>What brings you here?</label>
-        <select>
-          <option value="">Select a topic...</option>
-          <option>Trauma &amp; PTSD</option>
-          <option>Anxiety</option>
-          <option>Life Transitions</option>
-          <option>Relationship Challenges</option>
-          <option>Identity &amp; Personal Growth</option>
-          <option>Depression &amp; Mood</option>
-          <option>Something else</option>
-        </select>
-      </div>
-      <div class="fg"><label>Anything else you'd like to share?</label><textarea placeholder="Optional..."></textarea></div>
-      <p class="form-note">Your information is kept confidential. Submitting this form does not establish a therapeutic relationship. If you are in crisis, please contact 988 (Suicide &amp; Crisis Lifeline) or your local emergency services.</p>
-      <button class="btn-submit" onclick="handleSubmit(this)">Send Message</button>
+      <h3>Schedule Your Free Consultation</h3>
+      <p style="font-size:.92rem; color:var(--mid); line-height:1.7; margin-bottom:1.8rem;">Book a free 15-minute consultation directly on my calendar. You'll see real-time availability and pick the time that works best for you &mdash; no waiting on a callback.</p>
+      <a href="https://christopher-gilmore.clientsecure.me/request" target="_blank" rel="noopener" class="btn-submit">Schedule Now</a>
+      <p class="form-note" style="margin-top:1.4rem;">Prefer to reach out first? Email me directly at <a href="mailto:chris@christophergilmore.com" style="text-decoration:underline;">chris@christophergilmore.com</a>. If you are in crisis, please contact 988 (Suicide &amp; Crisis Lifeline) or your local emergency services.</p>
     </div>
   </div>
 </section>
@@ -788,12 +770,6 @@
     if (!wasOpen) el.classList.add('open');
   }
 
-  // Form submit
-  function handleSubmit(btn) {
-    btn.textContent = "✓ Message sent. I'll be in touch soon.";
-    btn.style.background = '#4A6741';
-    btn.disabled = true;
-  }
 </script>
 </body>
 </html>
