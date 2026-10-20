@@ -280,3 +280,18 @@ footer li a:hover, footer p a:hover { color: #fff; }
   .hero-content { padding-bottom: 3.5rem; }
   .hero.full .hero-content { padding-bottom: 4.5rem; }
 }
+
+/* Two audience paths on the homepage */
+.paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; max-width: 1080px; margin: 0 auto; }
+.path {
+  display: flex; flex-direction: column; gap: .9rem; padding: 2.4rem 2.2rem; background: var(--cream);
+  border: 1px solid transparent; transition: border-color var(--ease), transform var(--ease);
+}
+.path:hover { border-color: var(--forest); transform: translateY(-2px); }
+.path .eyebrow { margin-bottom: 0; }
+.path h2 { font-size: clamp(1.35rem, 2.2vw, 1.7rem); color: var(--forest); font-weight: 400; font-style: italic; }
+.path p { font-size: .95rem; color: var(--mid); line-height: 1.8; font-weight: 300; }
+.path ul { list-style: none; margin: .2rem 0 .4rem; padding: 0; }
+.path li { font-size: .9rem; color: var(--mid); padding: .5rem 0; border-top: 1px solid var(--line); font-weight: 300; }
+.path .more { margin-top: auto; font-size: .82rem; font-weight: 600; color: var(--gold-dk); letter-spacing: .03em; }
+@media (max-width: 760px) { .paths { grid-template-columns: 1fr; } .path { padding: 2rem 1.6rem; } }
