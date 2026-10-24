@@ -295,3 +295,7 @@ footer li a:hover, footer p a:hover { color: #fff; }
 .path li { font-size: .9rem; color: var(--mid); padding: .5rem 0; border-top: 1px solid var(--line); font-weight: 300; }
 .path .more { margin-top: auto; font-size: .82rem; font-weight: 600; color: var(--gold-dk); letter-spacing: .03em; }
 @media (max-width: 760px) { .paths { grid-template-columns: 1fr; } .path { padding: 2rem 1.6rem; } }
+
+/* CTA helper line and fee note */
+.cta-note { margin-top: 1rem; font-size: .85rem; color: rgba(255,255,255,.75); }
+.fee-note { max-width: 640px; margin: 0 auto 2rem; text-align: center; font-size: .92rem; line-height: 1.75; color: var(--mid); }
