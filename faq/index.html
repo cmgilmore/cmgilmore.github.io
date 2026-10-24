@@ -334,6 +334,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css?v=2" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8GF17G078T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8GF17G078T', { allow_google_signals: false, allow_ad_personalization_signals: false });
+  // Inquiry click tracking: booking, call, text, email (no personal data is sent)
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '', method = null;
+    if (h.indexOf('clientsecure.me') !== -1) method = 'booking_request';
+    else if (h.indexOf('tel:') === 0 && h !== 'tel:988' && h !== 'tel:911') method = 'call';
+    else if (h.indexOf('sms:') === 0) method = 'text';
+    else if (h.indexOf('mailto:') === 0) method = 'email';
+    if (method) gtag('event', 'generate_lead', { method: method, page_path: location.pathname, transport_type: 'beacon' });
+  });
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
