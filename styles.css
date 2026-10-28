@@ -299,3 +299,10 @@ footer li a:hover, footer p a:hover { color: #fff; }
 /* CTA helper line and fee note */
 .cta-note { margin-top: 1rem; font-size: .85rem; color: rgba(255,255,255,.75); }
 .fee-note { max-width: 640px; margin: 0 auto 2rem; text-align: center; font-size: .92rem; line-height: 1.75; color: var(--mid); }
+
+/* Contact buttons on phones: Schedule online full width, Text + Call side by side */
+@media (max-width: 480px) {
+  .cta-band .btns { gap: .75rem; }
+  .cta-band .btns .btn-primary { flex-basis: 100%; text-align: center; }
+  .cta-band .btns .btn-ghost { flex: 1; text-align: center; padding-left: 1rem; padding-right: 1rem; }
+}
