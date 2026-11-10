@@ -306,3 +306,27 @@ footer li a:hover, footer p a:hover { color: #fff; }
   .cta-band .btns .btn-primary { flex-basis: 100%; text-align: center; }
   .cta-band .btns .btn-ghost { flex: 1; text-align: center; padding-left: 1rem; padding-right: 1rem; }
 }
+
+/* Contact buttons in page heroes (landing pages) */
+.hero.page .btns { margin-top: 2rem; }
+
+/* Sticky contact bar on phones */
+.mcta { display: none; }
+@media (max-width: 860px) {
+  .mcta {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+    background: var(--forest); border-top: 1px solid rgba(255,255,255,.15);
+    padding: .55rem .6rem calc(.55rem + env(safe-area-inset-bottom)); gap: .5rem;
+  }
+  .mcta a {
+    flex: 1; text-align: center; padding: .8rem .5rem; font-size: .88rem; font-weight: 600;
+    letter-spacing: .03em; color: #fff; border: 1px solid rgba(255,255,255,.45); border-radius: 2px;
+  }
+  .mcta a.mcta-book { flex: 1.6; background: var(--gold); border-color: var(--gold); }
+  body { padding-bottom: calc(4.2rem + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 860px) {
+  /* the sticky bar carries Schedule / Text / Call on phones */
+  .hero.page .btns { display: none; }
+  .hero.page .cta-note { margin-top: 1.4rem; }
+}
