@@ -389,6 +389,22 @@
   <a href="sms:+17206965208?&amp;body=Hi%20Chris%2C%20I%27d%20like%20to%20schedule%20a%20free%20consultation.">Text</a>
   <a href="tel:+17206965208">Call</a>
 </div>
+<script>
+  (function () {
+    var bar = document.querySelector('.mcta');
+    if (!bar || !('IntersectionObserver' in window)) return;
+    var hero = document.querySelector('header.hero');
+    var targets = [hero && (hero.querySelector('.btns') || hero), document.querySelector('.cta-band .btns')].filter(Boolean);
+    var visible = new Set();
+    document.documentElement.classList.add('js-mcta');
+    bar.classList.add('is-hidden');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? visible.add(e.target) : visible.delete(e.target); });
+      bar.classList.toggle('is-hidden', visible.size > 0);
+    });
+    targets.forEach(function (t) { io.observe(t); });
+  })();
+</script>
 </footer>
 <script>
   (function () {
